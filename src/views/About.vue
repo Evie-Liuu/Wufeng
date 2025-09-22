@@ -18,7 +18,7 @@
       >
         <iframe
           @load="onIframeLoad"
-          src="https://www.thinglink.com/view/scene/2019642406927860198"
+          src="https://www.thinglink.com/view/scene/2026578216285635046"
           type="text/html"
           class="w-full h-full"
           webkitallowfullscreen
