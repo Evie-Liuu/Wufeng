@@ -2,7 +2,7 @@
   <main class="h-screen w-screeen flex flex-col items-center justify-center">
     <!-- School Title -->
     <section>
-      <div>彰化縣長安小學</div>
+      <div>彰化縣梧鳳小學</div>
     </section>
     <!-- Menu Buttons -->
     <section class="">

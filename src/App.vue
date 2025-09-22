@@ -23,7 +23,7 @@
         :class="{ hidden: $route.path === '/' }"
         class="relative z-20 my-auto md:text-3xl text-2xl"
       >
-        彰化縣長安國民小學
+        彰化縣梧鳳國民小學
       </div>
       <!-- <img
         src="@/assets/images/var02/Title.png"
