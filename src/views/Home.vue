@@ -1,65 +1,45 @@
 <template>
-  <main class="h-screen w-screeen flex flex-col items-center justify-center">
+  <main class="w-screen h-screen grid grid-cols-3 place-content-center gap-4">
     <!-- School Title -->
     <section>
       <div>彰化縣梧鳳小學</div>
+      <router-link to="/about" class="relative">
+        <img
+          src="@/assets/images/Story_v2.png"
+          class="pointer-events-none select-none"
+          alt="Column_1"
+        />
+        <span
+          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
+          >校園探索</span
+        >
+      </router-link>
     </section>
-    <!-- Menu Buttons -->
-    <section class="">
-      <div
-        :class="[
-          'transition-all duration-3000 ease-out',
-          isLoaded ? 'opacity-100' : 'opacity-0',
-        ]"
-        class="flex flex-col lg:flex-row pt-8 lg:pt-0 lg:gap-5 items-center justify-center text-xl lg:text-2xl"
+    <section>
+      <router-link to="/actions" class="relative"
+        ><img
+          src="@/assets/images/About_v2.png"
+          class="pointer-events-none select-none"
+          alt="Column_1"
+        />
+        <span
+          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
+          >SDGs行動</span
+        ></router-link
       >
-        <router-link
-          to="/about"
-          class="relative"
-          @mouseover="hoveredIndex = 0"
-          @mouseleave="hoveredIndex = null"
-        >
-          <img
-            :src="hoveredIndex === 0 ? paint1Selected : paint1Unselected"
-            class="pointer-events-none select-none w-52 lg:w-auto"
-            alt="Paint_1"
-          />
-          <span
-            class="absolute inset-0 flex items-center justify-center text-white ps-5 tracking-widest"
-            >校園探索</span
-          >
-        </router-link>
-        <router-link
-          to="/actions"
-          class="relative"
-          @mouseover="hoveredIndex = 1"
-          @mouseleave="hoveredIndex = null"
-          ><img
-            :src="hoveredIndex === 1 ? paint2Selected : paint2Unselected"
-            class="pointer-events-none select-none w-52 lg:w-auto"
-            alt="Paint_2"
-          />
-          <span
-            class="absolute inset-0 flex items-center justify-center text-white ps-5 tracking-widest"
-            >SDGs行動</span
-          ></router-link
-        >
-        <router-link
-          to="/sdgs"
-          class="relative -translate-x-1/6"
-          @mouseover="hoveredIndex = 2"
-          @mouseleave="hoveredIndex = null"
-          ><img
-            :src="hoveredIndex === 2 ? paint3Selected : paint3Unselected"
-            class="pointer-events-none select-none w-52 lg:w-auto"
-            alt="Paint_3"
-          />
-          <span
-            class="absolute inset-0 flex items-center justify-center text-white ps-5 tracking-widest"
-            >SDGs成果</span
-          ></router-link
-        >
-      </div>
+    </section>
+    <section>
+      <router-link to="/sdgs" class="relative"
+        ><img
+          src="@/assets/images/profile.png"
+          class="pointer-events-none select-none"
+          alt="Column_1"
+        />
+        <span
+          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
+          >SDGs成果</span
+        ></router-link
+      >
     </section>
   </main>
 </template>
