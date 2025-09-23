@@ -26,9 +26,9 @@
           allowfullscreen
           scrolling="no"
         ></iframe>
-        <div
+        <!-- <div
           class="absolute inset-0 2xl:border-10 border-pblue-100 pointer-events-none"
-        ></div>
+        ></div> -->
       </div>
     </main>
   </div>
