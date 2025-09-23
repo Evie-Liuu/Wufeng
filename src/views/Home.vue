@@ -23,20 +23,27 @@
     </section>
     <section>
       <router-link to="/actions" class="image-container gap-3">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center w-110">
           <img
-            src="@/assets/images/SDGs_Green_Actions.png"
-            class="pointer-events-none select-none scrollable-image mb-2"
-            alt="Column_1"
-          />
-        </div>
-        <!-- <div class="flex flex-col items-center">
-          <img
-            src="@/assets/images/School_Name.png"
+            src="@/assets/images/scene.webp"
             class="pointer-events-none select-none scrollable-image"
             alt="Column_1"
           />
-        </div> -->
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/SDGs_Green_Actions.png"
+            class="pointer-events-none select-none scrollable-image"
+            alt="Column_1"
+          />
+        </div>
+        <div class="flex flex-col items-center w-110">
+          <img
+            src="@/assets/images/scene2.webp"
+            class="pointer-events-none select-none scrollable-image"
+            alt="Column_1"
+          />
+        </div>
       </router-link>
     </section>
     <section>
@@ -63,18 +70,15 @@
       alt="Plants_Web"
       class="hidden lg:block absolute top-0 left-0 w-full object-cover z-20 pointer-events-none"
     />
+    <img
+      src="@/assets/images/WuFeng_Logo.webp"
+      alt="Plants_Web"
+      class="hidden lg:block absolute bottom-5 right-5 w-20 object-cover z-20 pointer-events-none"
+    />
   </main>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-// import ChinesePaintingRing from "@/assets/images/ChinesePaintingRing_v2_Hemei_2.webp";
-// import ChinesePaintingRing_mobile from "@/assets/images/Mobile_ChinesePaintingRing_v2_Hemei2.png";
-import paint1Unselected from "@/assets/images/Paint_1_v2_Unselected.png";
-import paint1Selected from "@/assets/images/Paint_1_v2_Selected.png";
-import paint2Unselected from "@/assets/images/Paint_2_v2_Unselected.png";
-import paint2Selected from "@/assets/images/Paint_2_v2_Selected.png";
-import paint3Unselected from "@/assets/images/Paint_3_v2_Unselected.png";
-import paint3Selected from "@/assets/images/Paint_3_v2_Selected.png";
 
 const hoveredIndex = ref(null);
 const isLoaded = ref(false);
