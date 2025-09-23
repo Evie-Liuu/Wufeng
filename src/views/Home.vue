@@ -64,6 +64,15 @@ const handleMouseEnter = (event, container) => {
   const y = event.clientY - rect.top;
   const percentage = y / rect.height;
 
+  // 定義中間區域範圍 (上下各 30% 為中間區域，總共 60% 的中間區域)
+  const centerStart = 0.2; // 20% 開始
+  const centerEnd = 0.8; // 80% 結束
+
+  // 如果在中間區域，不進行滑動
+  if (percentage >= centerStart && percentage <= centerEnd) {
+    return;
+  }
+
   // 根據鼠標進入時的位置決定初始滑動方向
   const newDirection = percentage < 0.5 ? "down" : "up";
 
@@ -79,6 +88,20 @@ const handleMouseMove = (event, container) => {
   const rect = container.getBoundingClientRect();
   const y = event.clientY - rect.top;
   const percentage = y / rect.height;
+
+  // 定義中間區域範圍 (上下各 30% 為中間區域，總共 60% 的中間區域)
+  const centerStart = 0.2; // 20% 開始
+  const centerEnd = 0.8; // 80% 結束
+
+  // 如果在中間區域，不進行滑動
+  if (percentage >= centerStart && percentage <= centerEnd) {
+    // 如果之前有滑動方向，清除它
+    if (currentDirection.value) {
+      currentDirection.value = null;
+      container.classList.remove("scroll-up", "scroll-down");
+    }
+    return;
+  }
 
   // 根據當前鼠標位置決定滑動方向
   const newDirection = percentage < 0.5 ? "down" : "up";
