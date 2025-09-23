@@ -23,7 +23,7 @@
     </section>
     <section>
       <router-link to="/actions" class="image-container gap-3">
-        <div class="flex flex-col items-center w-110">
+        <div class="flex flex-col items-center w-95">
           <img
             src="@/assets/images/scene.webp"
             class="pointer-events-none select-none scrollable-image"
@@ -37,7 +37,7 @@
             alt="Column_1"
           />
         </div>
-        <div class="flex flex-col items-center w-110">
+        <div class="flex flex-col items-center w-95">
           <img
             src="@/assets/images/scene2.webp"
             class="pointer-events-none select-none scrollable-image"
@@ -116,8 +116,8 @@ const handleMouseMove = (event, container) => {
   const percentage = y / rect.height;
 
   // 定義中間區域範圍 (上下各 30% 為中間區域，總共 60% 的中間區域)
-  const centerStart = 0.2; // 20% 開始
-  const centerEnd = 0.8; // 80% 結束
+  const centerStart = 0.4; // 40% 開始
+  const centerEnd = 0.6; // 60% 結束
 
   // 如果在中間區域，不進行滑動
   if (percentage >= centerStart && percentage <= centerEnd) {
@@ -188,17 +188,26 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
 }
 
 /* 滑動狀態類 */
 .image-container.scroll-down .scrollable-image {
-  transform: translateY(20%);
+  transform: translateY(30%);
 }
 
 .image-container.scroll-up .scrollable-image {
-  transform: translateY(-20%);
+  transform: translateY(-30%);
+}
+
+/* 中間三張圖片統一移動幅度 - 使用固定像素值確保一致性 */
+section:nth-child(2) .image-container.scroll-down .scrollable-image {
+  transform: translateY(350px);
+}
+
+section:nth-child(2) .image-container.scroll-up .scrollable-image {
+  transform: translateY(-200px);
 }
 
 /* 響應式設計 */
@@ -213,6 +222,15 @@ onMounted(() => {
 
   .image-container.scroll-up .scrollable-image {
     transform: translateY(-15%);
+  }
+
+  /* 移動端中間三張圖片統一移動幅度 */
+  section:nth-child(2) .image-container.scroll-down .scrollable-image {
+    transform: translateY(20px);
+  }
+
+  section:nth-child(2) .image-container.scroll-up .scrollable-image {
+    transform: translateY(-20px);
   }
 }
 </style>
