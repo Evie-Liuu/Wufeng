@@ -1,46 +1,68 @@
 <template>
-  <main class="w-screen h-screen grid grid-cols-3 place-content-center gap-4">
+  <main
+    class="relative w-screen h-screen grid grid-cols-3 place-content-center gap-4 bg-[url('@/assets/images/Mobile/Plants_Mobile.png'),url('@/assets/images/Mobile/mobile_Bcakground_1.png')] [background-size:cover,cover] overflow-hidden lg:bg-[url('@/assets/images/Background.png')] lg:bg-cover lg:bg-center"
+  >
     <!-- School Title -->
     <section>
-      <div>彰化縣梧鳳小學</div>
-      <router-link to="/about" class="relative image-container">
-        <img
-          src="@/assets/images/Story_v2.png"
-          class="pointer-events-none select-none scrollable-image"
-          alt="Column_1"
-        />
-        <span
-          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
-          >校園探索</span
-        >
+      <router-link to="/about" class="image-container gap-3">
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/Campus_Exploration.png"
+            class="pointer-events-none select-none scrollable-image mb-2"
+            alt="Column_1"
+          />
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/School_Name.png"
+            class="pointer-events-none select-none scrollable-image"
+            alt="Column_1"
+          />
+        </div>
       </router-link>
     </section>
     <section>
-      <router-link to="/actions" class="relative image-container"
-        ><img
-          src="@/assets/images/About_v2.png"
-          class="pointer-events-none select-none scrollable-image"
-          alt="Column_1"
-        />
-        <span
-          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
-          >SDGs行動</span
-        ></router-link
-      >
+      <router-link to="/actions" class="image-container gap-3">
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/SDGs_Green_Actions.png"
+            class="pointer-events-none select-none scrollable-image mb-2"
+            alt="Column_1"
+          />
+        </div>
+        <!-- <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/School_Name.png"
+            class="pointer-events-none select-none scrollable-image"
+            alt="Column_1"
+          />
+        </div> -->
+      </router-link>
     </section>
     <section>
-      <router-link to="/sdgs" class="relative image-container"
-        ><img
-          src="@/assets/images/profile.png"
-          class="pointer-events-none select-none scrollable-image"
-          alt="Column_1"
-        />
-        <span
-          class="absolute inset-0 flex items-center justify-center ps-5 tracking-widest"
-          >SDGs成果</span
-        ></router-link
-      >
+      <router-link to="/sdgs" class="image-container gap-3">
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/SDGs_Result.png"
+            class="pointer-events-none select-none scrollable-image mb-2"
+            alt="Column_1"
+          />
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="@/assets/images/Trans.png"
+            class="pointer-events-none select-none scrollable-image"
+            alt="Column_1"
+          />
+        </div>
+      </router-link>
     </section>
+
+    <img
+      src="@/assets/images/Plants_Web.webp"
+      alt="Plants_Web"
+      class="hidden lg:block absolute top-0 left-0 w-full object-cover z-20 pointer-events-none"
+    />
   </main>
 </template>
 <script setup>
@@ -148,7 +170,10 @@ onMounted(() => {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
-  height: 300px; /* 根據需要調整高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container:hover {
