@@ -1,86 +1,131 @@
 <template>
   <main
-    class="relative w-screen h-screen grid grid-cols-3 place-content-center gap-4 bg-[url('@/assets/images/Mobile/Plants_Mobile.png'),url('@/assets/images/Mobile/mobile_Bcakground_1.png')] [background-size:cover,cover] overflow-hidden lg:bg-[url('@/assets/images/Background.png')] lg:bg-cover lg:bg-center"
+    class="bg-[url('@/assets/images/Mobile/Plants_Mobile.png'),url('@/assets/images/Mobile/mobile_Bcakground_1.png')] [background-size:cover,cover] overflow-hidden lg:bg-[url('@/assets/images/Background.png')] lg:bg-cover lg:bg-center"
   >
-    <!-- School Title -->
-    <section>
-      <router-link to="/about" class="image-container gap-3">
-        <div class="flex flex-col items-center">
-          <img
-            src="@/assets/images/Campus_Exploration.png"
-            class="pointer-events-none select-none scrollable-image mb-2"
-            alt="Column_1"
-          />
-        </div>
-        <div class="flex flex-col items-center">
-          <img
-            src="@/assets/images/School_Name.png"
-            class="pointer-events-none select-none scrollable-image"
-            alt="Column_1"
-          />
-        </div>
-      </router-link>
-    </section>
-    <section>
-      <router-link to="/actions" class="image-container gap-3">
-        <div class="flex flex-col items-center w-95">
-          <img
-            src="@/assets/images/scene.webp"
-            class="pointer-events-none select-none scrollable-image"
-            alt="Column_1"
-          />
-        </div>
-        <div class="flex flex-col items-center">
-          <img
-            src="@/assets/images/SDGs_Green_Actions.png"
-            class="pointer-events-none select-none scrollable-image"
-            alt="Column_1"
-          />
-        </div>
-        <div class="flex flex-col items-center w-95">
-          <img
-            src="@/assets/images/scene2.webp"
-            class="pointer-events-none select-none scrollable-image"
-            alt="Column_1"
-          />
-        </div>
-      </router-link>
-    </section>
-    <section>
-      <router-link to="/sdgs" class="image-container gap-3">
-        <div class="flex flex-col items-center">
+    <!-- Mobile -->
+    <div
+      class="lg:hidden w-screen h-screen grid grid-cols-2 place-content-center px-4 py-8"
+    >
+      <section class="w-full max-w-md flex flex-col items-center gap-6">
+        <router-link to="/about" class="w-full flex justify-center">
           <img
             src="@/assets/images/SDGs_Result.png"
-            class="pointer-events-none select-none scrollable-image mb-2"
-            alt="Column_1"
+            class="w-full max-w-xs h-auto object-contain"
+            alt="Column_1_result"
           />
-        </div>
-        <div class="flex flex-col items-center">
+        </router-link>
+        <div class="flex flex-col items-center w-full">
           <img
-            src="@/assets/images/Trans.png"
-            class="pointer-events-none select-none scrollable-image"
-            alt="Column_1"
+            src="@/assets/images/Mobile/School_Name_Mobile.png"
+            class="w-full max-w-xs h-auto pointer-events-none select-none scrollable-image"
+            alt="Column_1_schoolName"
           />
         </div>
-      </router-link>
-    </section>
+      </section>
+      <section class="w-full max-w-md flex flex-col items-center gap-6">
+        <router-link to="/about" class="flex-1 w-full flex justify-center">
+          <div class="flex flex-col items-center w-full">
+            <img
+              src="@/assets/images/Campus_Exploration.png"
+              class="w-full max-w-xs h-auto object-contain"
+              alt="Column_2_exploration"
+            />
+          </div>
+        </router-link>
+        <router-link to="/actions" class="flex-1 w-full flex justify-center">
+          <div class="flex flex-col items-center w-full">
+            <img
+              src="@/assets/images/SDGs_Green_Actions.png"
+              class="w-full max-w-xs h-auto object-contain"
+              alt="Column_2_actions"
+            />
+          </div>
+        </router-link>
+      </section>
+    </div>
 
-    <img
-      src="@/assets/images/Plants_Web.webp"
-      alt="Plants_Web"
-      class="hidden lg:block absolute top-0 left-0 w-full object-cover z-20 pointer-events-none"
-    />
-    <img
-      src="@/assets/images/WuFeng_Logo.webp"
-      alt="Plants_Web"
-      class="hidden lg:block absolute bottom-5 right-5 w-20 object-cover z-20 pointer-events-none"
-    />
+    <!-- Web -->
+    <div
+      class="relative hidden w-screen h-screen lg:grid grid-cols-3 place-content-center"
+    >
+      <section>
+        <router-link to="/about" class="image-container gap-5">
+          <div class="flex flex-col items-center xl:translate-x-[5rem]">
+            <img
+              src="@/assets/images/Campus_Exploration.png"
+              class="pointer-events-none select-none scrollable-image border-10 border-gray-100"
+              alt="Column_1_exploration"
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="@/assets/images/School_Name.png"
+              class="pointer-events-none select-none scrollable-image"
+              alt="Column_1_schoolName"
+            />
+          </div>
+        </router-link>
+      </section>
+      <section>
+        <router-link to="/actions" class="image-container gap-5">
+          <div class="flex flex-col items-center w-100 h-115">
+            <img
+              src="@/assets/images/scene.webp"
+              class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
+              alt="Column_1"
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="@/assets/images/SDGs_Green_Actions.png"
+              class="pointer-events-none select-none scrollable-image border-5 border-gray-100"
+              alt="Column_1"
+            />
+          </div>
+          <div class="flex flex-col items-center w-100 h-115">
+            <img
+              src="@/assets/images/scene2.webp"
+              class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
+              alt="Column_1"
+            />
+          </div>
+        </router-link>
+      </section>
+      <section>
+        <router-link to="/sdgs" class="image-container gap-5">
+          <div class="flex flex-col items-center">
+            <img
+              src="@/assets/images/SDGs_Result.png"
+              class="pointer-events-none select-none scrollable-image border-10 border-gray-100"
+              alt="Column_1"
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="@/assets/images/Trans.png"
+              class="pointer-events-none select-none scrollable-image"
+              alt="Column_1"
+            />
+          </div>
+        </router-link>
+      </section>
+
+      <img
+        src="@/assets/images/Plants_Web.webp"
+        alt="Plants_Web"
+        class="hidden lg:block absolute top-0 left-0 w-full object-cover z-20 pointer-events-none"
+      />
+      <img
+        src="@/assets/images/WuFeng_Logo.webp"
+        alt="WuFeng_Logo"
+        class="hidden lg:block absolute bottom-5 right-5 w-20 object-cover z-20 pointer-events-none"
+      />
+    </div>
   </main>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
 
-const hoveredIndex = ref(null);
 const isLoaded = ref(false);
 const currentDirection = ref(null);
 const isScrolling = ref(false);
@@ -208,6 +253,35 @@ section:nth-child(2) .image-container.scroll-down .scrollable-image {
 
 section:nth-child(2) .image-container.scroll-up .scrollable-image {
   transform: translateY(-200px);
+}
+
+/* 行動版優化 */
+@media (max-width: 1023px) {
+  /* 行動版圖片容器樣式 */
+  .lg\:hidden .scrollable-image {
+    max-height: none;
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* 確保行動版圖片不會被裁掉 */
+  .lg\:hidden img {
+    object-fit: contain !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 280px;
+  }
+
+  /* 行動版容器間距調整 */
+  .lg\:hidden section {
+    gap: 1.5rem;
+  }
+
+  /* 行動版圖片容器 */
+  .lg\:hidden .flex {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* 響應式設計 */
