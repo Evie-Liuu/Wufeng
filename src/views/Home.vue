@@ -25,7 +25,7 @@
         </div>
       </section>
       <section class="w-full max-w-md flex flex-col items-center mt-28">
-        <router-link to="/about" class="flex-1 w-full flex justify-center">
+        <router-link to="/about" class="flex-1 w-full flex justify-center z-5">
           <div class="flex flex-col items-center w-full">
             <img
               src="@/assets/images/Campus_Exploration.png"
@@ -34,7 +34,10 @@
             />
           </div>
         </router-link>
-        <router-link to="/actions" class="flex-1 w-full flex justify-center">
+        <router-link
+          to="/actions"
+          class="flex-1 w-full flex justify-center z-5"
+        >
           <div class="flex flex-col items-center w-full">
             <img
               src="@/assets/images/SDGs_Green_Actions.png"
@@ -78,7 +81,9 @@
       </section>
       <section>
         <div class="image-container gap-5">
-          <div class="flex flex-col items-center w-100 h-115 xl:translate-x-[3rem]">
+          <div
+            class="flex flex-col items-center w-100 h-115 xl:translate-x-[3rem]"
+          >
             <img
               src="@/assets/images/scene.webp"
               class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
@@ -92,7 +97,9 @@
               alt="Column_1"
             />
           </router-link>
-          <div class="flex flex-col items-center w-100 h-115 xl:-translate-x-[5rem]">
+          <div
+            class="flex flex-col items-center w-100 h-115 xl:-translate-x-[5rem]"
+          >
             <img
               src="@/assets/images/scene2.webp"
               class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
