@@ -59,8 +59,7 @@
         <div class="image-container gap-5">
           <router-link
             to="/about"
-            v
-            class="flex flex-col items-center xl:translate-x-[5rem]"
+            class="flex flex-col items-center xl:translate-x-[8rem]"
           >
             <img
               src="@/assets/images/Campus_Exploration.png"
@@ -79,7 +78,7 @@
       </section>
       <section>
         <div class="image-container gap-5">
-          <div class="flex flex-col items-center w-100 h-115">
+          <div class="flex flex-col items-center w-100 h-115 xl:translate-x-[3rem]">
             <img
               src="@/assets/images/scene.webp"
               class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
@@ -93,7 +92,7 @@
               alt="Column_1"
             />
           </router-link>
-          <div class="flex flex-col items-center w-100 h-115">
+          <div class="flex flex-col items-center w-100 h-115 xl:-translate-x-[5rem]">
             <img
               src="@/assets/images/scene2.webp"
               class="pointer-events-none select-none scrollable-image border-8 border-gray-100"
@@ -103,7 +102,7 @@
         </div>
       </section>
       <section>
-        <div class="image-container gap-5">
+        <div class="image-container gap-20">
           <router-link to="/sdgs" class="flex flex-col items-center">
             <img
               src="@/assets/images/SDGs_Result.png"
@@ -111,7 +110,7 @@
               alt="Column_1"
             />
           </router-link>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center xl:-translate-x-[7rem]">
             <img
               src="@/assets/images/Trans.png"
               class="pointer-events-none select-none scrollable-image"
