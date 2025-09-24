@@ -50,7 +50,7 @@
         isMenuOpen ? 'h-screen' : 'h-0',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
         isMenuOpen
-          ? 'bg-[url(@/assets/images/Mobile/mobile_Bcakground.png)] bg-cover bg-center overflow-hidden'
+          ? 'bg-[url(@/assets/images/Mobile/mobile_Bcakground_1.png)] bg-cover bg-center overflow-hidden'
           : '',
       ]"
       class="md:text-shadow-none"
