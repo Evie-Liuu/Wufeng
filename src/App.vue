@@ -1,5 +1,12 @@
-
 <template>
+  <div v-if="isLoading" class="loading-overlay">
+    <img
+      src="@/assets/images/Ball_Loading.gif"
+      class="loader"
+      alt="Loading..."
+    />
+    <p>載入中...</p>
+  </div>
   <nav
     class="fixed top-0 left-0 z-50 w-full p-2 text-rice-500 md:text-4xl flex flex-row justify-between items-center transition-transform duration-300 ease-in-out"
     :class="[
@@ -61,7 +68,8 @@
         class="px-8 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300':
+            $route.path === '/',
         }"
       >
         <div class="p-3">首頁</div>
@@ -71,7 +79,8 @@
         class="px-4 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/about',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300':
+            $route.path === '/about',
         }"
       >
         <div class="p-3 md:p-3">
@@ -83,7 +92,8 @@
         class="px-4 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/actions',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300':
+            $route.path === '/actions',
         }"
       >
         <div class="p-3 md:p-3">

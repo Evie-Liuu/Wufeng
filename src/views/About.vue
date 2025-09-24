@@ -1,14 +1,12 @@
 <template>
   <div class="page-background">
     <div v-if="isLoading" class="loading-overlay">
-      <div class="loading-text">
-        <span style="--i: 1">載</span>
-        <span style="--i: 2">入</span>
-        <span style="--i: 3">中</span>
-        <span style="--i: 4">.</span>
-        <span style="--i: 5">.</span>
-        <span style="--i: 6">.</span>
-      </div>
+      <img
+        src="@/assets/images/Ball_Loading.gif"
+        class="loader"
+        alt="Loading..."
+      />
+      <p>載入中...</p>
     </div>
     <main
       class="absolute bottom-0 w-screen h-screen lg:max-h-280 flex justify-center items-center"
