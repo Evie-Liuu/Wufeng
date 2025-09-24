@@ -4,30 +4,32 @@
   >
     <!-- Mobile -->
     <div
-      class="lg:hidden w-screen h-screen grid grid-cols-2 place-content-center px-4 py-8"
+      class="lg:hidden w-screen h-screen grid grid-cols-2 place-content-center gap-5 px-4 py-8"
     >
       <section class="w-full max-w-md flex flex-col items-center gap-6">
-        <router-link to="/about" class="w-full flex justify-center">
+        <router-link to="/about" class="w-full flex justify-center z-5">
           <img
             src="@/assets/images/SDGs_Result.png"
-            class="w-full max-w-xs h-auto object-contain"
+            class="w-full max-w-sm h-auto object-contain border-4 border-gray-100"
             alt="Column_1_result"
           />
         </router-link>
-        <div class="flex flex-col items-center w-full">
+        <div
+          class="flex flex-col items-center w-full mb-30 ms-20 scale-160 -translate-y-8"
+        >
           <img
             src="@/assets/images/Mobile/School_Name_Mobile.png"
-            class="w-full max-w-xs h-auto pointer-events-none select-none scrollable-image"
+            class="w-full max-w-sm h-auto pointer-events-none select-none"
             alt="Column_1_schoolName"
           />
         </div>
       </section>
-      <section class="w-full max-w-md flex flex-col items-center gap-6">
+      <section class="w-full max-w-md flex flex-col items-center mt-28">
         <router-link to="/about" class="flex-1 w-full flex justify-center">
           <div class="flex flex-col items-center w-full">
             <img
               src="@/assets/images/Campus_Exploration.png"
-              class="w-full max-w-xs h-auto object-contain"
+              class="w-full max-w-sm h-auto object-contain border-4 border-gray-100"
               alt="Column_2_exploration"
             />
           </div>
@@ -36,7 +38,7 @@
           <div class="flex flex-col items-center w-full">
             <img
               src="@/assets/images/SDGs_Green_Actions.png"
-              class="w-full max-w-xs h-auto object-contain"
+              class="w-full max-w-sm h-auto object-contain border-4 border-gray-100"
               alt="Column_2_actions"
             />
           </div>
@@ -269,7 +271,7 @@ section:nth-child(2) .image-container.scroll-up .scrollable-image {
     object-fit: contain !important;
     height: auto !important;
     width: 100% !important;
-    max-width: 280px;
+    max-width: 320px;
   }
 
   /* 行動版容器間距調整 */

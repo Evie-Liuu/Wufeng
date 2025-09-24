@@ -50,18 +50,18 @@
         isMenuOpen ? 'h-screen' : 'h-0',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
         isMenuOpen
-          ? 'bg-[url(@/assets/images/Mobile/mobile_Bcakground.png)] bg-cover bg-center overflow-hidden'
+          ? 'bg-[url(@/assets/images/Mobile/mobile_Bcakground_1.png)] bg-cover bg-center overflow-hidden'
           : '',
       ]"
       class="md:text-shadow-none"
     >
-      <div class="absolute z-[-10] inset-0 bg-black/40 md:hidden"></div>
+      <!-- <div class="absolute z-[-10] inset-0 bg-black/40 md:hidden"></div> -->
       <router-link
         to="/"
         class="px-8 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none text-orange-300': $route.path === '/',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/',
         }"
       >
         <div class="p-3">首頁</div>
@@ -71,7 +71,7 @@
         class="px-4 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none text-orange-300': $route.path === '/about',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/about',
         }"
       >
         <div class="p-3 md:p-3">
@@ -83,7 +83,7 @@
         class="px-4 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none text-orange-300': $route.path === '/actions',
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300': $route.path === '/actions',
         }"
       >
         <div class="p-3 md:p-3">
@@ -95,7 +95,7 @@
         class="px-4 text-rice-500 text-shadow-3d"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none text-orange-300':
+          'pointer-events-none rounded-full bg-gradient-to-br from-[#39DDFF] to-yellow-300':
             $route.path === '/sdgs' || $route.path.includes('/story'),
         }"
       >
