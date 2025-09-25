@@ -20,12 +20,12 @@
       @click="isMenuOpen = false"
       class="flex flex-row items-center gap-2"
     >
-      <!-- <img
-        src="@/assets/images/Logo.gif"
+      <img
+        src="@/assets/images/WuFeng_Logo.webp"
         alt="School Logo"
         :class="{ hidden: $route.path === '/' }"
         class="relative z-20 inset-0 w-1/11 object-center md:w-1/20"
-      /> -->
+      />
       <div
         :class="{ hidden: $route.path === '/' }"
         class="relative z-20 my-auto md:text-3xl text-2xl"

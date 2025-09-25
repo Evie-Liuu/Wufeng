@@ -12,7 +12,7 @@
       class="absolute bottom-0 w-screen h-screen lg:max-h-280 flex justify-center items-center"
     >
       <div
-        class="relative w-full h-2/3 2xl:w-320 2xl:h-180 mx-auto translate-y-0 2xl:translate-y-4"
+        class="relative w-full h-5/7 2xl:w-320 2xl:h-175 mx-auto translate-y-0 2xl:translate-y-4"
       >
         <iframe
           @load="onIframeLoad"

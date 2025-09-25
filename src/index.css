@@ -7,6 +7,8 @@
   --color-orange-default: #E99166;
   --color-orange-tint: #ECD7A3;
   --color-green-text: #1A4B3E;
+
+  --breakpoint-2xl: 99rem;
 }
 
 body {
